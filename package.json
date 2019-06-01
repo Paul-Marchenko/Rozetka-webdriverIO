@@ -1,12 +1,12 @@
 {
   "name": "rozetka-webdriverio",
   "version": "1.0.0",
-  "description": "",
+  "description": "JS framework with selenium-webdriver",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 50000 './tests/**/*.js'"
   },
-  "author": "",
+  "author": "Paul-Marchenko",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",

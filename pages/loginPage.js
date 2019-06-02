@@ -2,7 +2,8 @@ const { Builder, By } = require('selenium-webdriver');
 const { assert } = require('chai');
 
 
-const personalOffice = By.css('header-topline__user-link link-dashed');
+const personalOffice = By.className('header-topline__user-link link-dashed');
+const modalWindowHeader = By.css('p[class="header-dropdown__title"]');
 const emailField = By.id('#auth_email');
 const passwordField = By.id('#auth_pass');
 const submitButton = By.css('[class="button button_color_navy auth-modal__login-button"]');
@@ -23,12 +24,15 @@ describe('Login to the site', () => {
 
     });
     it('Log in to the personal office', async () => {
-        personalOfficeLink =await driver.findElement(personalOffice);
-        personalOfficeLink.click();
+        await driver.findElement(personalOffice).click();
+        personalOfficeLink = driver.findElement(personalOffice);
+        modalWindowheaderTitle= await driver.findElement(modalWindowHeader);
+        assert.exists(modalWindowheaderTitle, 'Element is not found');
+        await driver.wait(until.elementLocated(driver.findElement(emailField)), 50000);
         await driver.findElement(emailField).sendKeys(email);
         await driver.findElement(passwordField).sendKeys(password);
         await driver.findElement(submitButton).click();
-        await driver.wait(until.elementLocated(personalOffice), 50000);
+        await driver.wait(until.elementLocated(driver.findElement(personalOffice)), 50000);
         assert.equal(personalOfficeLink.getText == userName);
 
     });

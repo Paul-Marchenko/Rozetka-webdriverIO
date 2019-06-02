@@ -13,6 +13,7 @@ others configurations are basic for more JS frameworks.
 + open this folder via VS Code.
 + nvm install script via cURL:                                                                    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 + restart terminal.
+more information about node.js [node](`https://nodesource.com/blog/installing-node-js-tutorial-using-nvm-on-mac-os-x-and-ubuntu/`)
 + nvm install node.
 + npm install (package-lock.json file appears).
 + npm init -i (package.json file appears).
@@ -22,6 +23,16 @@ others configurations are basic for more JS frameworks.
 ` mocha - test runner ` (or Jasmine),
 ` chai - assertion library `
 ` selenium-webdriver - automation library `
++ Download necessary webdrivers locally:
+Chrome | [chromedriver](http://chromedriver.storage.googleapis.com/index.html)
+Firefox47+ | [geckodriver](https://github.com/mozilla/geckodriver/releases/)
+Safari | [safaridriver](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_0.html#//apple_ref/doc/uid/TP40014305-CH11-DontLinkElementID_28) or (http://elementalselenium.com/tips/69-safari)
+Internet Explorer | [IEDriverServer.exe](http://selenium-release.storage.googleapis.com/index.html)
+Microsoft Edge | [MicrosoftWebDriver.msi](http://go.microsoft.com/fwlink/?LinkId=619687)
+Opera | [operadriver](https://github.com/operasoftware/operachromiumdriver/releases)
+Phontom Js | [phontomjs](http://phantomjs.org/).
++ Add browser webdriver path to the environment variables files:
+[environment variable PATH](https://www.kenst.com/2015/03/including-the-chromedriver-location-in-macos-system-path/).
 
 ## Additional configurations:
 + change or confige run script in the package.json file:

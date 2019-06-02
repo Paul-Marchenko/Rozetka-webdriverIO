@@ -33,8 +33,7 @@ selenium-webdriver - automation library.
   - Microsoft Edge | [MicrosoftWebDriver.msi](http://go.microsoft.com/fwlink/?LinkId=619687).
   - Opera | [operadriver](https://github.com/operasoftware/operachromiumdriver/releases)
   - Phantom Js | [phantomjs](http://phantomjs.org/).
-3. Add browser webdriver path to the [environment variable PATH]
-(https://www.kenst.com/2015/03/including-the-chromedriver-location-in-macos-system-path/) files:.
+3. Add browser webdriver path to the [environment variable PATH](https://www.kenst.com/2015/03/including-the-chromedriver-location-in-macos-system-path/) files.
 
 ## Additional configurations:
 1. change or confige run script in the package.json file:

@@ -21,7 +21,7 @@ others configurations are basic for more JS frameworks.
 ## Install libraries:
 1. npm install mocha chai selenium-webdriver.
 ```
-mocha - test runner  (or Jasmine),
+mocha - test runner (or Jasmine),
 chai - assertion library,
 selenium-webdriver - automation library.
 ```
@@ -33,8 +33,8 @@ selenium-webdriver - automation library.
   - Microsoft Edge | [MicrosoftWebDriver.msi](http://go.microsoft.com/fwlink/?LinkId=619687).
   - Opera | [operadriver](https://github.com/operasoftware/operachromiumdriver/releases)
   - Phantom Js | [phantomjs](http://phantomjs.org/).
-3. Add browser webdriver path to the [environment variable PATH] files:
-(https://www.kenst.com/2015/03/including-the-chromedriver-location-in-macos-system-path/).
+3. Add browser webdriver path to the [environment variable PATH]
+(https://www.kenst.com/2015/03/including-the-chromedriver-location-in-macos-system-path/) files:.
 
 ## Additional configurations:
 1. change or confige run script in the package.json file:
@@ -45,7 +45,7 @@ selenium-webdriver - automation library.
 },
 ```
 
-## Additional info in links:
+## Additional info is in links:
 + [WebdriverJS ApiDocs](https://seleniumhq.github.io/selenium/docs/api/javascript/index.html).
 + [MOCHA](https://mochajs.org).
 + [CHAI](https://www.chaijs.com).

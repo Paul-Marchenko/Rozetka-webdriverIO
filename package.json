@@ -13,8 +13,7 @@
   },
   "author": "Paul-Marchenko",
   "license": "ISC",
-  "dependencies": {
-    "expo": "^32.0.0",
+  "dependencies": {"expo": "^32.0.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "chai": "^4.2.0",
@@ -39,5 +38,5 @@
   "homepage": "https://github.com/Paul-Marchenko/Rozetka-webdriverIO#readme",
   "directories": {
     "test": "tests"
-  }
+}
 }

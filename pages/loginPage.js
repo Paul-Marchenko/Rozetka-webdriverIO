@@ -20,15 +20,15 @@ describe('Login to the site', () => {
         driver.manage().window().maximize();
         driver.manage().setTimeouts({ implicit: 4000, pageLoad: 10000 });
         await driver.get('https://rozetka.com.ua/ua/');
-        
-        
+
+
 
     });
     it('Log in to the personal office', async () => {
         await driver.findElement(personalOffice).click();
         personalOfficeLink = driver.findElement(personalOffice);
         personalOfficeLink.getText();
-        modalWindowheaderTitle= await driver.findElement(modalWindowHeader);
+        modalWindowheaderTitle = await driver.findElement(modalWindowHeader);
         assert.exists(modalWindowheaderTitle, 'Element is not found');
         //await driver.wait(until.elementLocated(driver.findElement(emailField)), 50000);
         await driver.findElement(emailField).sendKeys(email);
@@ -45,15 +45,14 @@ describe('Login to the site', () => {
         //assert.equal(personalOfficeLink.getText() == userName);
         //assert.equal(personalOfficeLink.getText() == userName, "'User ' + userName + ' login succesfully'");
         //assert.equal(personalOfficeLink.getText() == userName);
-        await driver.findElement(personalOffice).getText().then(function(userText){
+        await driver.findElement(personalOffice).getText().then(function (userText) {
             expect(userText).to.equal(userName);
-            
         })
-        
-        
+
+
 
     });
-    afterEach(()=>{
+    afterEach(() => {
         driver.quit();
     });
 

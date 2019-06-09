@@ -17,14 +17,13 @@ others configurations are basic for more JS frameworks.
 6. nvm install node.
 7. npm install (package-lock.json file appears).
 8. npm init -i (package.json file appears).
-<<<<<<< HEAD
+
 > If needs to be installed whole package for the project by default npm:
 1. npm install -g npm@4.6.1
 2. npm install -g create-react-native-app
 3. reate-react-native-app Rozetka-webdiverIO
 4. npm start
-=======
->>>>>>> 575df2e24575d7f3a1725f59598d3fb48ba0cf51
+
 
 ## Install libraries:
 1. npm install mocha chai selenium-webdriver.

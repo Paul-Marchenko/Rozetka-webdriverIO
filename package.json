@@ -1,0 +1,43 @@
+{
+  "name": "rozetka-webdriverio",
+  "version": "1.0.0",
+  "description": "JS framework with selenium-webdriver",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject",
+    "test": "mocha --timeout 50000 './pages/*.js'",
+    "mytest": "mocha --timeout 50000 './pages/*.js'"
+  },
+  "author": "Paul-Marchenko",
+  "license": "ISC",
+  "dependencies": {
+    "expo": "^32.0.0",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "chai": "^4.2.0",
+    "chromedriver": "^74.0.0",
+    "geckodriver": "^1.16.2",
+    "mocha": "^6.1.4",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "webdriver": "^5.9.6",
+    "webdriverio": "^5.9.6"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paul-Marchenko/Rozetka-webdriverIO.git"
+  },
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/Paul-Marchenko/Rozetka-webdriverIO/issues"
+  },
+  "homepage": "https://github.com/Paul-Marchenko/Rozetka-webdriverIO#readme",
+  "directories": {
+    "test": "tests"
+  }
+}

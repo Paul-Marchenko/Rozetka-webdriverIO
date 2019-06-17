@@ -35,6 +35,22 @@ describe('Login to the site', () => {
     })
     it('Log in to the personal office', async () => {
         await driver.findElement(personalOffice).click();
+        /** 
+         * //let hasExist = driver.isExisting("");
+        //expect(hasExist, "...text").to.be.true;
+        //let isTextShown = driver.isVisible(tr="....Text...")
+        // for error message as E.g;
+        //expect(isTextShown).to.be.true;
+        //let hasFocusedField = driver.hasFocus("#...")
+        //expect(hasFocusedField, "...text").to.be.true;
+        //waitFor;
+        //wait.until;
+        //addCommand;
+        //execute or selectorExecute;
+        //notifier;
+        //$. $$;
+        //add exlude;
+        */
         personalOfficeLink = driver.findElement(personalOffice);
         personalOfficeLink.getText();
         modalWindowheaderTitle = await driver.findElement(modalWindowHeader);

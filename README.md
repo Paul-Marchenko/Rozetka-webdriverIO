@@ -62,6 +62,8 @@ start selenium-standalone:
 `/node_modules/.bin/wdio` from the command line.
 4. Loglevel can be installed:
 `./node_modules/.bin/wdio --baseUrl=https://rozetka.com.ua/ua/ --logLevel=info`
+5. Install selenium-standalone-service:
+`npm install wdio-selenium-standalone-service --save-dev`
 
 ## Additional info is in links:
 + [WebdriverJS ApiDocs](https://seleniumhq.github.io/selenium/docs/api/javascript/index.html).
@@ -70,3 +72,9 @@ start selenium-standalone:
 
 ## How to run tests:
 + npm test (in the VS Code terminal).
+or
++ `DEBUG=true npm test`.
+or with specific env:
++ `SERVER=prod npm test`
+or only one specific test:
++ `npm test -- --spec=test/specs/testloginPage.spec.js`

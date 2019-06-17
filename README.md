@@ -32,6 +32,12 @@ mocha - test runner (or Jasmine),
 chai - assertion library,
 selenium-webdriver - automation library.
 ```
+if selenium-standalone is used then use command: 
++ `npm install --save-dev webdriverio selenium-standalone`
++ `./node_modules/.bin/selenium-standalone install`
+start selenium-standalone:
++ `./node_modules/.bin/selenium-standalone start`
+
 2. Download necessary webdrivers locally:
   - Chrome | [chromedriver](http://chromedriver.storage.googleapis.com/index.html).
   - Firefox47+ | [geckodriver](https://github.com/mozilla/geckodriver/releases/).
@@ -50,6 +56,12 @@ selenium-webdriver - automation library.
     "test": "mocha --timeout 50000 './tests/**/*.js'"
 },
 ```
+2. The testrunner will be bundled as a separate NPM package:
+`npm install @wdio/cli`.
+3. Run:
+`/node_modules/.bin/wdio` from the command line.
+4. Loglevel can be installed:
+`./node_modules/.bin/wdio --baseUrl=https://rozetka.com.ua/ua/ --logLevel=info`
 
 ## Additional info is in links:
 + [WebdriverJS ApiDocs](https://seleniumhq.github.io/selenium/docs/api/javascript/index.html).

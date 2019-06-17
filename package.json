@@ -13,7 +13,8 @@
   },
   "author": "Paul-Marchenko",
   "license": "ISC",
-  "dependencies": {"expo": "^32.0.0",
+  "dependencies": {
+    "expo": "^32.0.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "chai": "^4.2.0",
@@ -22,10 +23,18 @@
     "mocha": "^6.1.4",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "webdriver": "^5.9.6",
-    "webdriverio": "^5.9.6"
+    "webdriverio": "^5.9.5"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.0.0"
+    "@wdio/local-runner": "^5.10.4",
+    "@wdio/mocha-framework": "^5.10.1",
+    "@wdio/spec-reporter": "^5.9.3",
+    "@wdio/sync": "^5.10.1",
+    "babel-preset-expo": "^5.0.0",
+    "chromedriver": "^74.0.0",
+    "selenium-standalone": "^6.16.0",
+    "wdio-chromedriver-service": "^5.0.2",
+    "webdriverio": "^5.10.4"
   },
   "repository": {
     "type": "git",
@@ -38,5 +47,5 @@
   "homepage": "https://github.com/Paul-Marchenko/Rozetka-webdriverIO#readme",
   "directories": {
     "test": "tests"
-}
+  }
 }

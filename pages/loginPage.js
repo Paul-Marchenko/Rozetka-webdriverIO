@@ -12,6 +12,7 @@ const submitButton = By.css('[class="button button_color_navy auth-modal__login-
 const email = 'ForTestAct@i.ua';
 const password = '!QAZ2wsx';
 const userName = 'Richard';
+userText = '';
 
 
 describe('Login to the site', () => {
@@ -21,21 +22,35 @@ describe('Login to the site', () => {
         driver.manage().window().maximize();
         driver.manage().setTimeouts({ implicit: 4000, pageLoad: 10000 });
         await driver.get('https://rozetka.com.ua/ua/');
-        
-
-
-
     });
-    it('Title for the maun page', async () =>{
+
+    it('Title for the main page', async () => {
         driver.getTitle().then((title) => {
             console.log('Title is: ' + title);
             assert.equal(title == 'Интернет-магазин ROZETKA™: официальный сайт самого популярного онлайн-гипермаркета в Украине');
         });
+    });
 
-    })
     it('Log in to the personal office', async () => {
         await driver.findElement(personalOffice).click();
-        /** 
+        personalOfficeLink = driver.findElement(personalOffice);
+        personalOfficeLink.getText();
+        modalWindowheaderTitle = await driver.findElement(modalWindowHeader);
+        assert.exists(modalWindowheaderTitle, 'Element is not found');
+        await driver.findElement(emailField).sendKeys(email);
+        await driver.findElement(passwordField).sendKeys(password);
+        await driver.findElement(submitButton).click();
+        driver.wait(function () {
+            driver.findElement(personalOffice).isDisplayed().getText().then(function (userText) {
+                expect(userText).to.equal(userName, "'User ' + userName + ' is not login to the personal office'");
+                console.log('User ' + userText + ' login succesfully');
+            });
+        }, 50000);
+    });
+    afterEach(() => {
+        driver.quit();
+    });
+    /** 
          * //let hasExist = driver.isExisting("");
         //expect(hasExist, "...text").to.be.true;
         //let isTextShown = driver.isVisible(tr="....Text...")
@@ -51,35 +66,6 @@ describe('Login to the site', () => {
         //$. $$;
         //add exlude;
         */
-        personalOfficeLink = driver.findElement(personalOffice);
-        personalOfficeLink.getText();
-        modalWindowheaderTitle = await driver.findElement(modalWindowHeader);
-        assert.exists(modalWindowheaderTitle, 'Element is not found');
-        //await driver.wait(until.elementLocated(driver.findElement(emailField)), 50000);
-        await driver.findElement(emailField).sendKeys(email);
-        await driver.findElement(passwordField).sendKeys(password);
-        await driver.findElement(submitButton).click();
-        // await driver.wait(until.elementLocated(personalOffice)).then(() => {
-        //     driver.wait(until.elementIsVisible(driver.findElement(personalOffice)), 50000).then(() => {
-        //       console.log('User ' + userName + ' login succesfully');
-        //       print('User ' + userName + ' login succesfully');
-        //       assert.equal(personalOfficeLink.getText == userName);
-        //     })
-        //   })
-        await driver.wait(until.elementIsVisible(driver.findElement(personalOffice)), 50000);
-        //assert.equal(personalOfficeLink.getText() == userName);
-        //assert.equal(personalOfficeLink.getText() == userName, "'User ' + userName + ' login succesfully'");
-        //assert.equal(personalOfficeLink.getText() == userName);
-        await driver.findElement(personalOffice).getText().then(function (userText) {
-            expect(userText).to.equal(userName);
-        })
-
-
-
-    });
-    afterEach(() => {
-        driver.quit();
-    });
 
 });
 

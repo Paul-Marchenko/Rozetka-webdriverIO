@@ -2,7 +2,8 @@ const { Builder, By, until } = require('selenium-webdriver');
 const { assert, expect } = require('chai');
 
 
-
+const activeLanguage = By.css('[class="header-topline__language-item_state_active"]');
+const uaLanguage = By.xpath('//a[contains(@href,"/ua/") and contains(text(),"UA")]');
 const personalOffice = By.className('header-topline__user-link link-dashed');
 const modalWindowHeader = By.css('p[class="header-dropdown__title"]');
 //const emailField = By.id('#auth_email');
@@ -47,6 +48,21 @@ describe('Login to the site', () => {
             });
         }, 50000);
     });
+    // it.only('Selected language is UA', () => {
+    //     function selectedLanguage(){
+    //         if (driver.findElement(activeLanguage).getText() != 'UA'){
+    //             driver.findElement(uaLanguage).click();
+    //         }
+    //         expect(driver.findElement(activeLanguage).getText()).to.equal(' UA ');
+    //     }
+    //     selectedLanguage();
+    //     let lan = driver.findElement(activeLanguage);
+    //     let lanText = driver.findElement(activeLanguage).getText();
+    //     console.log(lan);
+    //     console.log(lanText);
+    //     expect(driver.findElement(activeLanguage).getText()).to.equal(' UA ');
+
+    // });
     afterEach(() => {
         driver.quit();
     });
@@ -66,7 +82,7 @@ describe('Login to the site', () => {
         //$. $$;
         //add exlude;
         */
-
+    
 });
 
 

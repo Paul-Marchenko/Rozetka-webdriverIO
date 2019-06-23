@@ -8,8 +8,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "test": "mocha --timeout 50000 './pages/*.js'",
-    "mytest": "mocha --timeout 50000 './pages/*.js'"
+    "test": "mocha --timeout 50000 './tests/specs/*spec.js'",
+    "mytest": "mocha --timeout 50000 './tests/specs/*spec.js'"
   },
   "author": "Paul-Marchenko",
   "license": "ISC",
